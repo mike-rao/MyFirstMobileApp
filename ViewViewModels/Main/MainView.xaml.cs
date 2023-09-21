@@ -4,7 +4,7 @@ public partial class MainView : ContentPage
 {
 	public MainView()
 	{
-		InitializeComponent();
+        InitializeComponent();
 		BindingContext = new MainViewModel();
 	}
 }

@@ -10,10 +10,11 @@ namespace MyFirstMobileApp.ViewViewModels.Main
 {
     public class MainViewModel : BaseViewModel
     {
+        public static String StackLayoutButtonName { get; set;  } = TitleMain.StackLayoutButtonName;
+
         public MainViewModel()
         {
             Title = TitleMain.MainTitle;
-            Button = ButtonText.ButtonName;
         }
     }
 }
