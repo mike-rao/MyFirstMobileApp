@@ -8,5 +8,6 @@ namespace MyFirstMobileApp.ViewViewModels.StackLayoutContents
 {
     public class StackLayoutViewModel
     {
+
     }
 }
