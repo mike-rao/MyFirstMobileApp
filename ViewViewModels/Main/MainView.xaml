@@ -15,15 +15,15 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-            </Grid.RowDefinitions
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            
+
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="{Binding StackLayoutButtonName}"
+                    Text="{Binding StackLayoutButton}"
                     Command="{Binding OnLayoutsClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"

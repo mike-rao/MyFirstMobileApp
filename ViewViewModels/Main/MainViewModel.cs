@@ -13,7 +13,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
 {
     public class MainViewModel : BaseViewModel
     {
-        public static String StackLayoutButtonName { get; set; } = TitleMain.StackLayoutButtonName;
+        public String StackLayoutButton { get; set; } = TitleMain.StackLayoutButtonName;
 
         public ICommand OnLayoutsClicked { get; set; }
 
