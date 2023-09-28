@@ -13,6 +13,5 @@ namespace MyFirstMobileApp.Models
         public static String VerticalLayoutButtonName { get; } = "Vertical Layout";
         public static String HorizontalLayoutButtonName { get; } = "Horizontal Layout";
         public static String AbsoluteLayoutButtonName { get; } = "Absolute Layout";
-
     }
 }
