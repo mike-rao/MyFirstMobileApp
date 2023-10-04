@@ -10,7 +10,6 @@ namespace MyFirstMobileApp.ViewViewModels.StackLayoutPageContents
 {
     public class StackLayoutPageViewModel : BaseViewModel
     {
-
         //Constructor
         public StackLayoutPageViewModel()
         {
