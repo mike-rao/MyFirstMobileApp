@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.AbsoluteLayoutContents.AbsoluteLayoutView"
+             Title="{Binding Title}">
+
+    <AbsoluteLayout>
+        <Label Text="Absolute!"
+               AbsoluteLayout.LayoutBounds="0.6, 0, 100, 25"
+               AbsoluteLayout.LayoutFlags="None" />
+        <BoxView Color="Red"
+                 AbsoluteLayout.LayoutBounds="0.1, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <BoxView Color="Green"
+                 AbsoluteLayout.LayoutBounds="0.35, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <BoxView Color="Blue"
+                 AbsoluteLayout.LayoutBounds="0.6, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <BoxView Color="Black"
+                 AbsoluteLayout.LayoutBounds="0.85, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+    </AbsoluteLayout>
+</ContentPage>

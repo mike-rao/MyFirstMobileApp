@@ -29,14 +29,19 @@
                 Command="{Binding OnStackLayoutClicked}" />
             <Button Grid.Row="1"
                 Grid.Column="0"
-                Text="{Binding VerticalLayoutButtonName}" />
+                Text="{Binding VerticalLayoutButtonName}" 
+                Command="{Binding OnVerticalLayoutClicked}" />
             <Button Grid.Row="1"
                 Grid.Column="1"
-                Text="{Binding HorizontalLayoutButtonName}" />
+                Text="{Binding HorizontalLayoutButtonName}" 
+                Command="{Binding OnHorizontalLayoutClicked}" />
             <Button Grid.Row="2"
                 Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Text="{Binding AbsoluteLayoutButtonName}" />
+                Text="{Binding AbsoluteLayoutButtonName}" 
+                Command="{Binding OnAbsoluteLayoutClicked}" />
+            <Button Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding FlexLayoutButtonName}" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

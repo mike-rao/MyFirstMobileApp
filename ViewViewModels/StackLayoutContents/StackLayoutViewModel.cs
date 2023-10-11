@@ -1,6 +1,9 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
+using MyFirstMobileApp.ViewViewModels.AbsoluteLayoutContents;
+using MyFirstMobileApp.ViewViewModels.HorizontalLayoutContents;
 using MyFirstMobileApp.ViewViewModels.StackLayoutPageContents;
+using MyFirstMobileApp.ViewViewModels.VerticalLayoutContents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +20,13 @@ namespace MyFirstMobileApp.ViewViewModels.StackLayoutContents
         public String VerticalLayoutButtonName { get; set; } = TitleLayouts.VerticalLayoutButtonName;
         public String HorizontalLayoutButtonName { get; set; } = TitleLayouts.HorizontalLayoutButtonName;
         public String AbsoluteLayoutButtonName { get; set; } = TitleLayouts.AbsoluteLayoutButtonName;
+        public String FlexLayoutButtonName { get; set; } = TitleLayouts.FlexLayoutButtonName;
 
         //Button Commands
         public ICommand OnStackLayoutClicked { get; set; }
+        public ICommand OnVerticalLayoutClicked { get; set; }
+        public ICommand OnHorizontalLayoutClicked { get; set; }
+        public ICommand OnAbsoluteLayoutClicked { get; set; }
 
         //Constructor
         public StackLayoutViewModel()
@@ -28,12 +35,27 @@ namespace MyFirstMobileApp.ViewViewModels.StackLayoutContents
 
             //Set Commands
             OnStackLayoutClicked = new Command(OnStackLayoutClickedAsync);
+            OnVerticalLayoutClicked = new Command(OnVerticalLayoutClickedAsync);
+            OnHorizontalLayoutClicked = new Command(OnHorizontalLayoutClickedAsync);
+            OnAbsoluteLayoutClicked = new Command(OnAbsoluteLayoutClickedAsync);
         }
 
         //Navigation between pages
         private async void OnStackLayoutClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new StackLayoutPageView());
+        }
+        private async void OnVerticalLayoutClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new VerticalLayoutView());
+        }
+        private async void OnHorizontalLayoutClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new HorizontalLayoutView());
+        }
+        private async void OnAbsoluteLayoutClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new AbsoluteLayoutView());
         }
     }
 }
