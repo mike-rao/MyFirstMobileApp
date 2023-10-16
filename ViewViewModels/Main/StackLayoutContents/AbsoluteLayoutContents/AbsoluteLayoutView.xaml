@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.AbsoluteLayoutContents.AbsoluteLayoutView"
+             Title="{Binding Title}">
+
+    <AbsoluteLayout>
+        <Label Text="Absolute!" 
+               FontSize="Title"
+               FontAttributes="Bold" 
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="End"
+               AbsoluteLayout.LayoutBounds="0, 0, 390, 70"
+               AbsoluteLayout.LayoutFlags="None" />
+        
+        <BoxView Color="Green" 
+                 AbsoluteLayout.LayoutBounds="0.1, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="White" 
+               Text="01" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.2, 0.2, 125, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="Red"
+                 AbsoluteLayout.LayoutBounds="0.35, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="BlanchedAlmond" 
+               Text="02" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.5, 0.2, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="BlanchedAlmond"
+                 AbsoluteLayout.LayoutBounds="0.6, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Maroon"
+               Text="03" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.8, 0.2, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="LightBlue"
+                 AbsoluteLayout.LayoutBounds="0.85, 0.2, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Purple" 
+               Text="04" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="1.1, 0.2, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <BoxView Color="Aquamarine" 
+                 AbsoluteLayout.LayoutBounds="0.1, 0.3, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Green" 
+               Text="05" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.2, 0.3, 130, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="Maroon"
+                 AbsoluteLayout.LayoutBounds="0.35, 0.3, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="OldLace" 
+               Text="06" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.5, 0.3, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="CadetBlue"
+                 AbsoluteLayout.LayoutBounds="0.6, 0.3, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="AliceBlue"
+               Text="07" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.8, 0.3, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="Plum"
+                 AbsoluteLayout.LayoutBounds="0.85, 0.3, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Yellow" 
+               Text="08" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="1.1, 0.3, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <BoxView Color="YellowGreen" 
+                 AbsoluteLayout.LayoutBounds="0.1, 0.4, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Red" 
+               Text="09" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.2, 0.4, 130, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="Turquoise"
+                 AbsoluteLayout.LayoutBounds="0.35, 0.4, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Coral"
+               Text="10" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.5, 0.4, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="DarkOliveGreen"
+                 AbsoluteLayout.LayoutBounds="0.6, 0.4, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="SkyBlue"
+               Text="11" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.8, 0.4, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <BoxView Color="SteelBlue"
+                 AbsoluteLayout.LayoutBounds="0.85, 0.4, 60, 35"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label TextColor="Aqua" 
+               Text="12" FontSize="Medium" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="1.1, 0.4, 120, 20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+    </AbsoluteLayout>
+</ContentPage>
