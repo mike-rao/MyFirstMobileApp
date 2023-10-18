@@ -24,7 +24,7 @@
         <BoxView Color="Red"
                  AbsoluteLayout.LayoutBounds="0.35, 0.2, 60, 35"
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
-        <Label TextColor="BlanchedAlmond" 
+        <Label TextColor="AntiqueWhite"
                Text="02" FontSize="Medium" FontAttributes="Bold"
                AbsoluteLayout.LayoutBounds="0.5, 0.2, 120, 20" 
                AbsoluteLayout.LayoutFlags="PositionProportional" />
@@ -32,7 +32,7 @@
         <BoxView Color="BlanchedAlmond"
                  AbsoluteLayout.LayoutBounds="0.6, 0.2, 60, 35"
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
-        <Label TextColor="Maroon"
+        <Label TextColor="DarkRed"
                Text="03" FontSize="Medium" FontAttributes="Bold"
                AbsoluteLayout.LayoutBounds="0.8, 0.2, 120, 20" 
                AbsoluteLayout.LayoutFlags="PositionProportional" />
