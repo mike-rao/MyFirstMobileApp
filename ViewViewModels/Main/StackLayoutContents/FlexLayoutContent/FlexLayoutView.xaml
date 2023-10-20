@@ -4,24 +4,19 @@
              x:Class="MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.FlexLayoutContent.FlexLayoutView"
              Title="{Binding Title}">
 
-
-
-    <FlexLayout Direction="Row" JustifyContent="SpaceAround" Margin="-20, 0, 20, 0">
+    <FlexLayout Direction="Row" JustifyContent="SpaceAround" Margin="-30, 0, 20, 0">
         <FlexLayout Direction="Column" JustifyContent="Center">
             <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
-
             <Label Text="Red" />
         </FlexLayout>
 
         <FlexLayout Direction="Column" JustifyContent="Center">
             <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
-
             <Label Text="Green" />
         </FlexLayout>
 
         <FlexLayout Direction="Column" JustifyContent="Center">
             <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
-
             <Label Text="Blue" />
         </FlexLayout>
     </FlexLayout>

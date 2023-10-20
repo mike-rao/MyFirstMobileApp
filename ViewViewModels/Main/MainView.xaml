@@ -27,7 +27,7 @@
                     Command="{Binding OnLayoutsClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="Button 0, 1" />
+                    Text="{Binding ImagesButton}" />
             <Button Grid.Row="1"
                     Grid.Column="0"
                     Text="Button 1, 0" />
