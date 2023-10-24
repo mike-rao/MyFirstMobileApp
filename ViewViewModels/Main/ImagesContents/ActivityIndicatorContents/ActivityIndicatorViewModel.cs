@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.Main.Images
+namespace MyFirstMobileApp.ViewViewModels.Main.ImagesContents.ActivityIndicatorContents
 {
-    class ImagesViewModel
+    internal class ActivityIndicatorViewModel
     {
     }
 }

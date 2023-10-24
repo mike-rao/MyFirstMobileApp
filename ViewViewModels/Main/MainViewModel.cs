@@ -1,6 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
-using MyFirstMobileApp.ViewViewModels.Main.Images;
+using MyFirstMobileApp.ViewViewModels.Main.ImagesContents;
 using MyFirstMobileApp.ViewViewModels.StackLayoutContents;
 using System;
 using System.Collections.Generic;
