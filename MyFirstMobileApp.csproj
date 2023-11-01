@@ -53,10 +53,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ViewViewModels\Main\CollectionsContents\CollectionContents\CollectionPageView.xaml.cs">
+	    <DependentUpon>CollectionPageView.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="ViewViewModels\AbsoluteLayoutContents\AbsoluteLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\HorizontalLayoutContents\HorizontalLayoutView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionContents\CollectionPageView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionWButtonsContents\CollectionWButtonsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionWIconsContents\CollectionWIconsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionWImagesContents\CollectionWImagesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Main\ImagesContents\ActivityIndicatorContents\ActivityIndicatorView.xaml">

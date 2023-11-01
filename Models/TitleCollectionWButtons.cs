@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    public static class TitleURIImages
+    public static class TitleCollectionWButtons
     {
-        public static String URIImagesTitle { get; } = "URI Image";
+        public static String CollectionsWButtonsTitle { get; } = "Collection w/Buttons";
     }
 }

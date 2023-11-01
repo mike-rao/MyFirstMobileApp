@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
+using MyFirstMobileApp.ViewViewModels.Main.CollectionsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ImagesContents;
 using MyFirstMobileApp.ViewViewModels.StackLayoutContents;
 using System;
@@ -17,10 +18,12 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         //Pull button text from Model
         public String StackLayoutButton { get; set; } = TitleMain.StackLayoutButtonName;
         public String ImagesButton { get; set; } = TitleMain.ImagesButtonName;
+        public String CollectionsButton { get; set; } = TitleMain.CollectionsButtonName;
 
         //Button Commands
         public ICommand OnLayoutsClicked { get; set; }
         public ICommand OnImagesClicked { get; set; }
+        public ICommand OnCollectionsClicked { get; set; }
 
         public MainViewModel()
         {
@@ -29,6 +32,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
             //Set Commands
             OnLayoutsClicked = new Command(OnLayoutsClickedAsync);
             OnImagesClicked = new Command(OnImagesClickedAsync);
+            OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
         }
 
         //Navigation between pages
@@ -39,6 +43,10 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         private async void OnImagesClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new ImagesView());
+        }
+        private async void OnCollectionsClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new CollectionsView());
         }
     }
 }

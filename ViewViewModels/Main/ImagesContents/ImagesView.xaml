@@ -29,13 +29,6 @@
                 Grid.Column="1"
                 Text="{Binding EmbeddedButtonName}"
                 Command="{Binding OnEmbeddedClicked}" />
-            <Button Grid.Row="1"
-                Grid.Column="0"
-                Text="{Binding ActivityIndicatorButtonName}" 
-                Command="{Binding OnActivityIndicatorClicked}" />
-            <Button Grid.Row="1"
-                Grid.Column="1"
-                Text="Button 1, 1" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

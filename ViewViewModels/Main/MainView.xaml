@@ -31,7 +31,8 @@
                     Command="{Binding OnImagesClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="Button 1, 0" />
+                    Text="{Binding CollectionsButton}" 
+                    Command="{Binding OnCollectionsClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="1"
                     Text="Button 1, 1" />
