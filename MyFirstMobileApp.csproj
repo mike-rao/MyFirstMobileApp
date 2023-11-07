@@ -49,6 +49,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\COC\archerqueen.jpg" />
+	  <None Remove="Resources\Images\COC\balloon.jpg" />
+	  <None Remove="Resources\Images\COC\dragon.jpg" />
+	  <None Remove="Resources\Images\COC\goblin.jpg" />
+	  <None Remove="Resources\Images\COC\hogrider.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\COC\archerqueen.jpg" />
+	  <MauiImage Include="Resources\Images\COC\balloon.jpg" />
+	  <MauiImage Include="Resources\Images\COC\dragon.jpg" />
+	  <MauiImage Include="Resources\Images\COC\goblin.jpg" />
+	  <MauiImage Include="Resources\Images\COC\hogrider.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
