@@ -14,19 +14,20 @@ namespace MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionCon
     public class CollectionPageViewModel : BaseViewModel
     {
         //Private fields
-        private List<SupercellGames> _supercellgames;
+        private List<EntityCollectionPage> _supercellgames;
 
         //Observable collection bound to the View
-        public ObservableCollection<SupercellGames> SupercellGamesCollection { get; }
+        public ObservableCollection<EntityCollectionPage> SupercellGamesCollection { get; }
 
         //Constructor
         public CollectionPageViewModel() 
         {
             Title = TitleCollection.CollectionTitle;
 
-            SupercellGamesCollection = new ObservableCollection<SupercellGames>();
+            //Instantiate Observable TroopsCollection
+            SupercellGamesCollection = new ObservableCollection<EntityCollectionPage>();
 
-            _supercellgames = SupercellGames.GetGames();
+            _supercellgames = EntityCollectionPage.GetGames();
             this.LoadGames();
         }
 
@@ -36,10 +37,9 @@ namespace MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionCon
             try
             {
                 SupercellGamesCollection.Clear();
-
-                foreach (var p in _supercellgames)
+                foreach (var s in _supercellgames)
                 {
-                    SupercellGamesCollection.Add(new SupercellGames { NameofGame = p.NameofGame });
+                    SupercellGamesCollection.Add(new EntityCollectionPage { NameofGame = s.NameofGame});
                 }
             }
             catch (Exception ex) 

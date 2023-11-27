@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.VerticalLayoutContents
+namespace MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.VerticalLayoutContents
 {
     public class VerticalLayoutViewModel : BaseViewModel
     {

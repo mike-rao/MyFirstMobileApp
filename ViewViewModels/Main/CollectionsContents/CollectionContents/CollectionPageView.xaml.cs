@@ -5,5 +5,6 @@ public partial class CollectionPageView : ContentPage
 	public CollectionPageView()
 	{
 		InitializeComponent();
+		BindingContext = new CollectionPageViewModel();
 	}
 }

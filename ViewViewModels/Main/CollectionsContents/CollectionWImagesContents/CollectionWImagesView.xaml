@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:MyFirstMobileApp.Models.Entities"
              x:Class="MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionWImagesContents.CollectionWImagesView"
-             Title="CollectionWImagesView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="{Binding Title}">
+	
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Label">
+				<Setter Property="Margin" Value="5" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding TroopsCollection}"
+                    SelectionMode="None"
+                    ItemsLayout="VerticalList">
+
+		<CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="local:EntityCollectionWImages">
+				<StackLayout>
+					<FlexLayout Direction="Row" JustifyContent="Start" AlignItems="Start">
+						<Image Source="{Binding TroopImage}" Aspect="AspectFill" WidthRequest="250" />
+
+						<StackLayout FlexLayout.Grow="1" Padding="5" HorizontalOptions="StartAndExpand">
+							<Label Text="{Binding TroopType}" FontAttributes="Bold" TextColor="CadetBlue" HorizontalOptions="Start" WidthRequest="100" />
+							<Label Text="{Binding TroopName}" FontAttributes="Italic, Bold" TextColor="Blue" HorizontalOptions="Start" WidthRequest="100" />
+						</StackLayout>
+					</FlexLayout>
+
+					<BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="0,5,0,0" />
+				</StackLayout>
+			</DataTemplate>
+		</CollectionView.ItemTemplate>
+	</CollectionView>
 </ContentPage>

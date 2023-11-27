@@ -1,6 +1,6 @@
-using MyFirstMobileApp.ViewViewModels.StackLayoutPageContents;
+using MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.StackLayoutPageContents;
 
-namespace MyFirstMobileApp.ViewViewModels.HorizontalLayoutContents;
+namespace MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.HorizontalLayoutContents;
 
 public partial class HorizontalLayoutView : ContentPage
 {

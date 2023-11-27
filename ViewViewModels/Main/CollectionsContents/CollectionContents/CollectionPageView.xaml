@@ -5,32 +5,36 @@
              x:Class="MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionContents.CollectionPageView"
              Title="{Binding Title}">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Label">
-                <Setter Property="Margin" Value="5" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+	<StackLayout>
+		<StackLayout HorizontalOptions="CenterAndExpand">
+			<Label Text="Supercell Games" FontSize="40" FontAttributes="Bold,Italic" TextColor="CadetBlue" WidthRequest="175" />
+		</StackLayout>
 
-    <CollectionView x:Name="ItemsListView"
-                    ItemsSource="{Binding ClashOfClansCollection}"
-                    SelectionMode="None"
-                    ItemsLayout="VerticalList">
+		<BoxView HeightRequest="2" BackgroundColor="#000000" />
 
-        <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="local:TroopInfo">
-                <StackLayout>
-                    <FlexLayout Direction="Row" JustifyContent="Start" AlignItems="Start">
-                        <Image Source="{Binding TroopImage}" Aspect="AspectFill" WidthRequest="250" />
+		<CollectionView x:Name="ItemsListView"
+						ItemsSource="{Binding SupercellGamesCollection}"
+						SelectionMode="None">
+			<CollectionView.ItemsLayout>
+				<LinearItemsLayout Orientation="Vertical" />
+			</CollectionView.ItemsLayout>
 
-                        <StackLayout FlexLayout.Grow="1" Padding="5" HorizontalOptions="StartAndExpand">
-                            <Label Text="{Binding TroopName}" FontAttributes="Bold" TextColor="CadetBlue" HorizontalOptions="Start" WidthRequest="100" />
-                            <Label Text="{Binding TroopName}" FontAttributes="Bold" TextColor="CadetBlue" HorizontalOptions="Start" WidthRequest="100" />
-                        </StackLayout>
-                    </FlexLayout>
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+			<CollectionView.ItemTemplate>
+				<DataTemplate x:DataType="local:EntityCollectionPage">
+					<Grid Padding="2">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+
+						<StackLayout Orientation="Horizontal">
+							<StackLayout>
+								<Label Text="{Binding NameofGame}" FontAttributes="Bold" HorizontalTextAlignment="Start"
+									   TextColor="Black" FontSize="Medium" />
+							</StackLayout>
+						</StackLayout>
+					</Grid>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>
+	</StackLayout>
 </ContentPage>

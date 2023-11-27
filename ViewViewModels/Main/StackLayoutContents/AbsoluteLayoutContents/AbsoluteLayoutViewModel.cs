@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.AbsoluteLayoutContents
+namespace MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.AbsoluteLayoutContents
 {
     public class AbsoluteLayoutViewModel : BaseViewModel
     {

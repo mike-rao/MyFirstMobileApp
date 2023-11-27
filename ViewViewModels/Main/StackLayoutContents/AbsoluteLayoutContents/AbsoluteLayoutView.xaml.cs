@@ -1,4 +1,4 @@
-namespace MyFirstMobileApp.ViewViewModels.AbsoluteLayoutContents;
+namespace MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.AbsoluteLayoutContents;
 
 public partial class AbsoluteLayoutView : ContentPage
 {

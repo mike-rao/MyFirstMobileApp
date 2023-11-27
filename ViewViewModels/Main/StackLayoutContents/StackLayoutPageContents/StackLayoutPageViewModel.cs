@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.StackLayoutPageContents
+namespace MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents.StackLayoutPageContents
 {
     public class StackLayoutPageViewModel : BaseViewModel
     {

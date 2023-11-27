@@ -2,7 +2,7 @@
 using MyFirstMobileApp.ViewModels;
 using MyFirstMobileApp.ViewViewModels.Main.CollectionsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ImagesContents;
-using MyFirstMobileApp.ViewViewModels.StackLayoutContents;
+using MyFirstMobileApp.ViewViewModels.Main.StackLayoutContents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
