@@ -4,6 +4,7 @@ public partial class CollectionWButtonsView : ContentPage
 {
 	public CollectionWButtonsView()
 	{
-		InitializeComponent();
+        InitializeComponent();
+        BindingContext = new CollectionWButtonsViewModel();
 	}
 }

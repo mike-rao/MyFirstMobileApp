@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.AddEdit.EditCollectionView"
+             Title="{Binding Title}">
+
+    <FlexLayout Padding="5" Direction="Column">
+
+        <Label Text="Game Title" FontAttributes="Bold" FontSize="Large"  TextColor="Black" Margin="5,5" />
+
+        <Entry Placeholder="Enter Game Title" FontAttributes="Bold" FontSize="Large" TextColor="Blue" HorizontalOptions="FillAndExpand"
+                   Text="{Binding GameName, Mode=TwoWay}" x:Name="GameTitle" Margin="5,-10" />
+
+        <Button Text="Update" Command="{Binding UpdateBtnClicked}" BackgroundColor="Green" TextColor="White"
+                     HorizontalOptions="FillAndExpand" x:Name="saveBtn" Margin="0,10" />
+
+    </FlexLayout>
+    
+</ContentPage>

@@ -10,7 +10,7 @@
         </Style>
     </ContentPage.Resources>
 
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center">
         <Grid Margin="25, 35, 20, 20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
