@@ -10,6 +10,10 @@ namespace MyFirstMobileApp.Models.Entities
     {
         public string NameofGame { get; set; }
 
+        //Image Buttons
+        public ImageSource EditButton { get; } = Buttons.ButtonEdit;
+        public ImageSource DeleteButton { get; } = Buttons.ButtonDelete;
+
         public EntityCollectionPage()
         {
             //Constructor

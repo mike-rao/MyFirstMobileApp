@@ -96,6 +96,9 @@
 	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionWImagesContents\CollectionWImagesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\ControlsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Main\ImagesContents\ActivityIndicatorContents\ActivityIndicatorView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -123,6 +126,15 @@
 	  <MauiXaml Update="ViewViewModels\VerticalLayoutContents\VerticalLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewViewModels\Main\ControlsContents\EntryContents\" />
+	  <Folder Include="ViewViewModels\Main\ControlsContents\DateAndTimePickerContents\" />
+	  <Folder Include="ViewViewModels\Main\ControlsContents\PickerContents\" />
+	  <Folder Include="ViewViewModels\Main\ControlsContents\SwitchContents\" />
+	  <Folder Include="ViewViewModels\Main\ControlsContents\StepperContents\" />
+	  <Folder Include="ViewViewModels\Main\ControlsContents\SliderContents\" />
 	</ItemGroup>
 
 </Project>

@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyFirstMobileApp.Models.Entities"
              x:Class="MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionWIconsContents.CollectionWIconsView"
-             Title="CollectionWIconsView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="{Binding Title}">
+
+    <!-- Applying a "Style" to the buttons. This will provide space between the buttons -->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <FlexLayout Direction="Column" AlignItems="Center">
+            <Label Text="Games" FontSize="50" FontAttributes="Bold, Italic" TextColor="CadetBlue" />
+        </FlexLayout>
+
+        <BoxView HeightRequest="2" BackgroundColor="#000000" />
+
+        <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding RefreshCommand}">
+            <CollectionView x:Name="ItemsCollectionView" ItemsSource="{Binding SupercellGamesCollection, Mode=TwoWay}"
+                            SelectionMode="None" ItemsLayout="VerticalList">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:EntityCollectionPage">
+                        <StackLayout>
+                            <!-- FlexLayout with NameOfMovie and buttons -->
+                            <FlexLayout AlignItems="Start">
+                                <Label Text="{Binding NameofGame, Mode=TwoWay}" FontAttributes="Bold"
+                                       HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium"
+                                       FlexLayout.Grow="1" />
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <ImageButton x:Name="EditButton" Source="{Binding EditButton}" Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference ItemsCollectionView}}"
+                                                 CommandParameter="{Binding .}" HorizontalOptions="End" />
+
+                                    <ImageButton Source="ImageButtons/iconsdelete.png" Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference ItemsCollectionView}}"
+                                                 CommandParameter="{Binding .}" HorizontalOptions="End" />
+                                </StackLayout>
+                            </FlexLayout>
+
+                            <!-- Add a BoxView for the separator below each item -->
+                            <BoxView HeightRequest="2" BackgroundColor="LightGray" />
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
 </ContentPage>

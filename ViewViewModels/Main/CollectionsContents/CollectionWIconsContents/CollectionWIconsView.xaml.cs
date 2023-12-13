@@ -5,5 +5,6 @@ public partial class CollectionWIconsView : ContentPage
 	public CollectionWIconsView()
 	{
 		InitializeComponent();
+		BindingContext = new CollectionWIconsViewModel();
 	}
 }
