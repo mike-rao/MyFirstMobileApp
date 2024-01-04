@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    internal class TitleStepper
+    public static class TitleStepper
     {
+        public static String StepperTitle { get; } = "Stepper";
     }
 }

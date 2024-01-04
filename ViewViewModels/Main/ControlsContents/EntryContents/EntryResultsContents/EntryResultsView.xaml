@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.ControlsContents.EntryContents.EntryResultsContents.EntryResultsView"
+             Title="{Binding Title}">
+
+    <StackLayout VerticalOptions="Center">
+        <Label Text=" Result From Entry Page" FontSize="Title" FontAttributes="Bold"
+               TextColor="CornflowerBlue" HorizontalOptions="Center"/>
+
+        <BoxView HeightRequest="3" BackgroundColor="Black" WidthRequest="300"/>
+
+        <Label Text="{Binding EntryText}" FontSize="Title" TextColor="DarkRed"
+               FontAttributes="Bold" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>

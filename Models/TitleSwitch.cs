@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    internal class TitleSwitch
+    public static class TitleSwitch
     {
+        public static String SwitchTitle { get; } = "Switch";
     }
 }

@@ -1,5 +1,11 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.DateAndTimePickerContents;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.EntryContents;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.SliderContents;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.StepperContents;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.SwitchContents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +35,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents
 
         public ControlsViewModel()
         {
-            Title = TitleMain.MainTitle;
+            Title = TitleMain.ControlsButtonName;
 
             //Set Commands
             OnSliderClicked = new Command(OnSliderClickedAsync);
@@ -43,27 +49,27 @@ namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents
         //Navigation between pages
         private async void OnSliderClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+            await Application.Current.MainPage.Navigation.PushAsync(new SliderView());
         }
         private async void OnStepperClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+            await Application.Current.MainPage.Navigation.PushAsync(new StepperView());
         }
         private async void OnSwitchClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+            await Application.Current.MainPage.Navigation.PushAsync(new SwitchView());
         }
         private async void OnEntryClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+            await Application.Current.MainPage.Navigation.PushAsync(new EntryView());
         }
         private async void OnPickerClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerView());
         }
         private async void OnDateAndTimePickerClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+            await Application.Current.MainPage.Navigation.PushAsync(new DateAndTimePickerView());
         }
     }
 }

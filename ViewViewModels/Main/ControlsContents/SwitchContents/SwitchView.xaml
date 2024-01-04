@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.ControlsContents.SwitchContents.SwitchView"
+             Title="{Binding Title}">
+    
+    <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Label Text="First Switch" x:Name="label1" FontSize="Large" TextColor="Blue" FontAttributes="Bold" />
+        <Switch x:Name="switch1" IsToggled="True" Toggled="SwitchToggledFirst" ThumbColor="Blue" OnColor="Green" />
+
+        <Label Text="Second Switch" x:Name="label2" FontSize="Large" TextColor="#FF00EC" FontAttributes="Bold" />
+        <Switch x:Name="switch2" IsToggled="False" Toggled="SwitchToggledSecond" ThumbColor="BlueViolet" OnColor="#FF00EC" />
+    </FlexLayout>
+    
+</ContentPage>

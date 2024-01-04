@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.Models
+namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents
 {
-    internal class TitleEntery
+    internal class PickerViewModel
     {
     }
 }

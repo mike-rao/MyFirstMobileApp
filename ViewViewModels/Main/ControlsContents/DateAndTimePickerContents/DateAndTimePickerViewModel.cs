@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.Models
+namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents.DateAndTimePickerContents
 {
-    public static class TitleSlider
+    internal class DateAndTimePickerViewModel
     {
-        public static String SliderTitle { get; } = "Slider";
     }
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    public static class TitleSlider
+    public static class TitleEntry
     {
-        public static String SliderTitle { get; } = "Slider";
+        public static String EntryTitle { get; } = "Entry";
+        public static String EntryResultsTitle { get; } = "Entry Results";
     }
 }

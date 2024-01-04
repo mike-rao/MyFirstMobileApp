@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.ControlsContents.SliderContents.SliderView"
+             Title="{Binding Title}"
+             BackgroundColor="black">
+
+    <StackLayout>
+
+        <BoxView Color="Red"
+                 Opacity="{Binding Value, Source={x:Reference slider}}"
+                 HeightRequest="25"
+                 HorizontalOptions="CenterAndExpand" />
+
+        <Slider x:Name="slider"
+                ThumbColor="Red"
+                Value="0.5"
+                MaximumTrackColor="Aqua"
+                MinimumTrackColor="Black" />
+
+        <Label x:Name="SliderValue"
+               Text="{Binding Value, Source={x:Reference slider}, StringFormat= 'Value of the slider is {0:F2}'}"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="White"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="Info"
+               Text="   Moving SLIDER will change OPACITY   "
+               FontAttributes="Bold"
+               FontSize="Medium"
+               TextColor="Red"
+               HorizontalOptions="Center" />
+
+    </StackLayout>
+
+</ContentPage>
+
