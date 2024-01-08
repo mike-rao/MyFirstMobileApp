@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents.PickerVM.PickerVMView"
+             Title="{Binding Title}">
+
+    <StackLayout>
+
+        <Label Text="PickerVM!"
+               FontSize="Large"
+               FontAttributes="Bold,Italic"
+               TextColor="Blue"
+               MinimumHeightRequest="110"
+               HorizontalOptions="CenterAndExpand"
+               Margin="10" />
+
+        <BoxView HeightRequest="3"
+                 BackgroundColor="Black"
+                 WidthRequest="375" />
+
+        <StackLayout HorizontalOptions="Center">
+
+            <Picker x:Name="pickerVM"
+                    Title="Select a Character"
+                    TitleColor="DarkRed"
+                    SelectedItem="{Binding SelectedCharacter}"
+                    FontSize="Large"
+                    FontAttributes="Bold,Italic"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    ItemsSource="{Binding CharacterList}" />
+
+            <BoxView HeightRequest="3"
+                     BackgroundColor="Black"
+                     WidthRequest="375" />
+
+            <ImageButton BackgroundColor="Transparent"
+                         Source="{Binding SubmitButton}"
+                         Command="{Binding OnSubmitClicked}" />
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents.PickerXAML.PickerXAMLView"
+             Title="{Binding Title}">
+
+    <StackLayout>
+
+        <Label Text="Click Below"
+               FontSize="Large"
+               FontAttributes="Bold,Italic"
+               MinimumWidthRequest="130"
+               HorizontalOptions="Center"
+               Margin="20" />
+
+        <BoxView HeightRequest="3"
+                 BackgroundColor="Black"
+                 WidthRequest="375" />
+
+        <StackLayout HorizontalOptions="CenterAndExpand">
+
+            <Picker x:Name="pickerXAML"
+                    Title="Select a Troop"
+                    TitleColor="DarkRed"
+                    SelectedItem="{Binding SelectedCharacter}"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large">
+
+                <Picker.ItemsSource>
+
+                    <x:Array Type="{x:Type x:String}">
+
+                        <x:String>Hog Rider</x:String>
+                        <x:String>Dragon</x:String>
+                        <x:String>Archer Queen</x:String>
+                        <x:String>Balloon</x:String>
+                        <x:String>Goblin</x:String>
+
+                    </x:Array>
+
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <BoxView HeightRequest="3"
+                     BackgroundColor="Black"
+                     WidthRequest="375" />
+
+            <ImageButton BackgroundColor="Transparent"
+                         Source="{Binding SubmitButton}"
+                         Command="{Binding OnSubmitClicked}"
+                         Margin="10" />
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

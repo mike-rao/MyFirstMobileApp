@@ -49,6 +49,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\pickerbuttonblue.png" />
+	  <MauiImage Remove="Resources\Images\pickerbuttonred.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\ImageButtons\buttonsubmit.png" />
+	  <None Remove="Resources\ImageButtons\datepickerbuttonblue.png" />
+	  <None Remove="Resources\ImageButtons\datepickerbuttonred.png" />
+	  <None Remove="Resources\ImageButtons\iconsdelete.png" />
+	  <None Remove="Resources\ImageButtons\iconsedit.png" />
 	  <None Remove="Resources\Images\COC\archerqueen.jpg" />
 	  <None Remove="Resources\Images\COC\balloon.jpg" />
 	  <None Remove="Resources\Images\COC\dragon.jpg" />
@@ -57,6 +67,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\ImageButtons\buttonsubmit.png" />
+	  <MauiImage Include="Resources\ImageButtons\datepickerbuttonblue.png" />
+	  <MauiImage Include="Resources\ImageButtons\datepickerbuttonred.png" />
+	  <MauiImage Include="Resources\ImageButtons\iconsdelete.png" />
+	  <MauiImage Include="Resources\ImageButtons\iconsedit.png" />
 	  <MauiImage Include="Resources\Images\COC\archerqueen.jpg" />
 	  <MauiImage Include="Resources\Images\COC\balloon.jpg" />
 	  <MauiImage Include="Resources\Images\COC\dragon.jpg" />
@@ -108,7 +123,16 @@
 	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\EntryContents\EntryView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\PickerContents\PickerResults\PickerResultsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\PickerContents\PickerView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\PickerContents\PickerVM\PickerVMView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\PickerContents\PickerXAML\PickerXAMLView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Main\ControlsContents\SliderContents\SliderView.xaml">
