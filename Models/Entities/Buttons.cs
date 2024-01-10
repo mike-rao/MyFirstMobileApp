@@ -15,11 +15,11 @@ namespace MyFirstMobileApp.Models.Entities
         public static ImageSource ButtonSubmit { get; } = ImageSource.FromFile("ImageButtons/buttonsubmit.png");
 
         //DatePicker
-        public static ImageSource ButtonDatePickerBlue { get; } = ImageSource.FromFile("ImageButtons/dpbuttonblue.png");
-        public static ImageSource ButtonDatePickerRed { get; } = ImageSource.FromFile("ImageButtons/dpbuttonred.png"); 
+        public static ImageSource ButtonDatePickerBlue { get; } = ImageSource.FromFile("ImageButtons/datepickerbuttonblue.png");
+        public static ImageSource ButtonDatePickerRed { get; } = ImageSource.FromFile("ImageButtons/datepickerbuttonred.png"); 
 
         //Picker
-        public static ImageSource ButtonPickerBlue { get; } = ImageSource.FromFile("ImageButtons/buttonblue.png");  
-        public static ImageSource ButtonPickerRed { get; } = ImageSource.FromFile("ImageButtons/buttonred.png");
+        public static ImageSource ButtonPickerBlue { get; } = ImageSource.FromFile("ImageButtons/pickerbuttonblue.png");  
+        public static ImageSource ButtonPickerRed { get; } = ImageSource.FromFile("ImageButtons/pickerbuttonred.png");
     }
 }

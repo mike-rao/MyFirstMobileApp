@@ -21,7 +21,7 @@
         <StackLayout HorizontalOptions="Center">
 
             <Picker x:Name="pickerVM"
-                    Title="Select a Character"
+                    Title="Select a Troop"
                     TitleColor="DarkRed"
                     SelectedItem="{Binding SelectedCharacter}"
                     FontSize="Large"

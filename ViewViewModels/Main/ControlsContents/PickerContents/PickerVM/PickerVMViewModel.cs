@@ -13,7 +13,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents.P
 {
     public class PickerVMViewModel : BaseViewModel
     {
-        public ImageSource SubmitButton { get; set; } = "ImageButtons/submit.png";
+        public ImageSource SubmitButton { get; set; } = "ImageButtons/buttonsubmit.png";
 
         //Property to bind the Picker Item Source
         public List<string> CharacterList { get; set; }

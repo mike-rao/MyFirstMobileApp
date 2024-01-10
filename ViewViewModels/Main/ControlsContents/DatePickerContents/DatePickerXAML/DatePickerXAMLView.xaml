@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.ControlsContents.DatePickerContents.DatePickerXAML.DatePickerXAMLView"
+             Title="{Binding Title}"
+             BackgroundColor="#2F2F31">
+
+    <!-- Applying a "Style" to the buttons. This will provide a space between the buttons -->
+    <ContentPage.Resources>
+
+        <Style TargetType="Button">
+
+            <Setter Property="Margin"
+                    Value="5" />
+
+        </Style>
+
+        <Style TargetType="DatePicker">
+
+            <Setter Property="Margin"
+                    Value="10" />
+
+        </Style>
+
+    </ContentPage.Resources>
+
+
+    <StackLayout VerticalOptions="Center">
+
+        <Label Text="Start Date"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="Red"
+               HorizontalOptions="CenterAndExpand" />
+
+        <DatePicker x:Name="StartDatePicker"
+                    DateSelected="StartDatePicker_DateSelected"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    InputTransparent="False" />
+
+        <Label Text="End Date"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand" />
+
+        <DatePicker x:Name="EndDatePicker"
+                    DateSelected="EndDatePicker_DateSelected"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    InputTransparent="False" />
+
+        <Button BackgroundColor="Transparent"
+                ImageSource="ImageButtons/buttonsubmit.png"
+                Clicked="Button_Clicked" />
+
+    </StackLayout>
+
+</ContentPage>

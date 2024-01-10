@@ -6,12 +6,12 @@
 
     <StackLayout VerticalOptions="Center">
         <Entry x:Name="EntryValue" Placeholder="Enter Text Here" PlaceholderColor="CornflowerBlue"
-               Text="{Binding EntryText}" TextColor="PaleVioletRed" WidthRequest="300" HorizontalOptions="Center"/>
+               Text="{Binding EntryText}" TextColor="PaleVioletRed" WidthRequest="300" HorizontalOptions="Center" />
 
-        <BoxView HeightRequest="3" BackgroundColor="Black" WidthRequest="300"/>
+        <BoxView HeightRequest="3" BackgroundColor="Black" WidthRequest="300" />
 
         <Button Text="Go To Results Page" HorizontalOptions="Center" FontAttributes="Bold,Italic" Margin="10"
-                TextColor="GhostWhite" BackgroundColor="CornflowerBlue" Command="{Binding OnEntryButtonClicked}"/>
+                TextColor="GhostWhite" BackgroundColor="CornflowerBlue" Command="{Binding OnEntryButtonClicked}" />
 
     </StackLayout>
 </ContentPage>

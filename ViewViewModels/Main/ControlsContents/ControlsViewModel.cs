@@ -1,6 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
-using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.DateAndTimePickerContents;
+using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.DatePickerContents;
 using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.EntryContents;
 using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents;
 using MyFirstMobileApp.ViewViewModels.Main.ControlsContents.SliderContents;
@@ -69,7 +69,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents
         }
         private async void OnDateAndTimePickerClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new DateAndTimePickerView());
+            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerView());
         }
     }
 }
