@@ -76,7 +76,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main.ControlsContents.PickerContents.P
             if (selectedCharacterInfo != null)
             {
                 //Combining actor's name and character's name into a single string for display
-                string name = $"{selectedCharacterInfo.TroopType} As {selectedCharacterInfo.TroopName}";
+                string name = $"{selectedCharacterInfo.TroopName} \nTroop Type: {selectedCharacterInfo.TroopType}";
 
                 //Use selected CharacterInfo.ActorImage for the actor's image
                 await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(name, selectedCharacterInfo.TroopImage));

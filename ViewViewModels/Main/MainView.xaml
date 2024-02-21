@@ -15,6 +15,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -37,6 +38,11 @@
                     Grid.Column="1"
                     Text="{Binding ControlsButton}" 
                     Command="{Binding OnControlsClicked}" />
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding SQLiteButton}" 
+                    Command="{Binding OnSQLiteClicked}" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

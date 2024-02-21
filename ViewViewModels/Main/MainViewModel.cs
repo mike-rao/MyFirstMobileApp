@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
+using MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters;
 using MyFirstMobileApp.ViewViewModels.Main.CollectionsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ControlsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ImagesContents;
@@ -21,12 +22,14 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         public String ImagesButton { get; set; } = TitleMain.ImagesButtonName;
         public String CollectionsButton { get; set; } = TitleMain.CollectionsButtonName;
         public String ControlsButton { get; set; } = TitleMain.ControlsButtonName;
+        public String SQLiteButton { get; set; } = TitleMain.SQLiteButtonName;
 
         //Button Commands
         public ICommand OnLayoutsClicked { get; set; }
         public ICommand OnImagesClicked { get; set; }
         public ICommand OnCollectionsClicked { get; set; }
         public ICommand OnControlsClicked { get; set; }
+        public ICommand OnSQLiteClicked { get; set; }
 
         public MainViewModel()
         {
@@ -37,6 +40,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
             OnImagesClicked = new Command(OnImagesClickedAsync);
             OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
             OnControlsClicked = new Command(OnControlsClickedAsync);
+            OnSQLiteClicked = new Command(OnSQLiteClickedAsync);
         }
 
         //Navigation between pages
@@ -55,6 +59,10 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         private async void OnControlsClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+        }
+        private async void OnSQLiteClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new BrawlStarCharactersView());
         }
     }
 }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters.BrawlStarCharactersView"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style TargetType="BoxView">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Dreams" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
+            </StackLayout>
+
+            <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#000000"/>
+
+            <CollectionView x:Name="VacationGoals" ItemsSource="{Binding VacationCollection, Mode=TwoWay}"
+                                    SelectionMode="None" ItemsLayout="VerticalList">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate x:DataType="model:Vacation">
+
+                        <Grid Padding="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Left Side -->
+                            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                                <Label Text="{Binding Country, Mode=TwoWay}" FontAttributes="Bold" FontSize="Large"
+                                           HorizontalTextAlignment="Start" TextColor="Black" />
+
+                                <Label Text=", " FontSize="Large" />
+
+                                <Label Text="{Binding City, Mode=TwoWay}" FontAttributes="Bold" FontSize="Large" 
+                                           HorizontalTextAlignment="Start" TextColor="Black" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                                <Label Text="Visited:" FontAttributes="Bold" FontSize="Large" VerticalOptions="Center" />
+
+                                <Switch x:Name="IsVisited" IsToggled="{Binding Visited, Mode=TwoWay}"
+                                            ThumbColor="Red" OnColor="Green" VerticalOptions="Center" />
+                            </StackLayout>
+
+                            <!-- Right Side -->
+                            <StackLayout Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Orientation="Vertical" HorizontalOptions="End">
+                                <Button Text="Update"
+                                             Command="{Binding Path=BindingContext.UpdateCommand, Source={x:Reference VacationGoals}, Mode=TwoWay}"
+                                             CommandParameter="{Binding .}" TextTransform="None" BackgroundColor="Blue" TextColor="White" FontAttributes="Bold,Italic" />
+
+                                <Button Text="Delete"
+                                             Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference VacationGoals}, Mode=TwoWay}"
+                                             CommandParameter="{Binding .}" TextTransform="None" BackgroundColor="Red" TextColor="White" FontAttributes="Bold,Italic" />
+                            </StackLayout>
+
+                            <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#000000"/>
+                        </Grid>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
