@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters.BrawlStarCharactersView"
+             xmlns:model="clr-namespace:MyFirstMobileApp.Models.Entities"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters.BrawlStarCharactersView"
              Title="{Binding Title}">
 
     <ContentPage.Resources>
@@ -21,17 +22,17 @@
         <StackLayout>
 
             <StackLayout HorizontalOptions="CenterAndExpand">
-                <Label Text="Dreams" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
+                <Label Text="Characters" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
             </StackLayout>
 
             <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#000000"/>
 
-            <CollectionView x:Name="VacationGoals" ItemsSource="{Binding VacationCollection, Mode=TwoWay}"
+            <CollectionView x:Name="CharacterGoals" ItemsSource="{Binding BrawlStarCharactersCollection, Mode=TwoWay}"
                                     SelectionMode="None" ItemsLayout="VerticalList">
 
                 <CollectionView.ItemTemplate>
 
-                    <DataTemplate x:DataType="model:Vacation">
+                    <DataTemplate x:DataType="model:BrawlStarCharacters">
 
                         <Grid Padding="2">
                             <Grid.ColumnDefinitions>
@@ -47,30 +48,30 @@
 
                             <!-- Left Side -->
                             <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-                                <Label Text="{Binding Country, Mode=TwoWay}" FontAttributes="Bold" FontSize="Large"
+                                <Label Text="{Binding Name, Mode=TwoWay}" FontAttributes="Bold" FontSize="Large"
                                            HorizontalTextAlignment="Start" TextColor="Black" />
 
                                 <Label Text=", " FontSize="Large" />
 
-                                <Label Text="{Binding City, Mode=TwoWay}" FontAttributes="Bold" FontSize="Large" 
+                                <Label Text="{Binding Rarity, Mode=TwoWay}" FontAttributes="Bold" FontSize="Large" 
                                            HorizontalTextAlignment="Start" TextColor="Black" />
                             </StackLayout>
 
                             <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
-                                <Label Text="Visited:" FontAttributes="Bold" FontSize="Large" VerticalOptions="Center" />
+                                <Label Text="Owned:" FontAttributes="Bold" FontSize="Large" VerticalOptions="Center" />
 
-                                <Switch x:Name="IsVisited" IsToggled="{Binding Visited, Mode=TwoWay}"
+                                <Switch x:Name="IsOwned" IsToggled="{Binding Owned, Mode=TwoWay}"
                                             ThumbColor="Red" OnColor="Green" VerticalOptions="Center" />
                             </StackLayout>
 
                             <!-- Right Side -->
                             <StackLayout Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Orientation="Vertical" HorizontalOptions="End">
                                 <Button Text="Update"
-                                             Command="{Binding Path=BindingContext.UpdateCommand, Source={x:Reference VacationGoals}, Mode=TwoWay}"
+                                             Command="{Binding Path=BindingContext.UpdateCommand, Source={x:Reference CharacterGoals}, Mode=TwoWay}"
                                              CommandParameter="{Binding .}" TextTransform="None" BackgroundColor="Blue" TextColor="White" FontAttributes="Bold,Italic" />
 
                                 <Button Text="Delete"
-                                             Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference VacationGoals}, Mode=TwoWay}"
+                                             Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference CharacterGoals}, Mode=TwoWay}"
                                              CommandParameter="{Binding .}" TextTransform="None" BackgroundColor="Red" TextColor="White" FontAttributes="Bold,Italic" />
                             </StackLayout>
 

@@ -39,7 +39,7 @@
                     Text="{Binding ControlsButton}" 
                     Command="{Binding OnControlsClicked}" />
             <Button Grid.Row="2"
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Text="{Binding SQLiteButton}" 
                     Command="{Binding OnSQLiteClicked}" />

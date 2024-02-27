@@ -1,4 +1,4 @@
-namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters;
+namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters;
 
 public partial class BrawlStarCharactersView : ContentPage
 {

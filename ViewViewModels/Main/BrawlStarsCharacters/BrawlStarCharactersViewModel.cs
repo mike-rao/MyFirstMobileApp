@@ -1,5 +1,7 @@
 ﻿using Microsoft.Maui.Devices.Sensors;
 using MyFirstMobileApp.Models;
+using MyFirstMobileApp.Models.DataAccess;
+using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters
+namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters
 {
     public class BrawlStarCharactersViewModel : BaseViewModel
     {

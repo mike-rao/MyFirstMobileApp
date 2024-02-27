@@ -1,6 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
-using MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters;
+using MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters;
 using MyFirstMobileApp.ViewViewModels.Main.CollectionsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ControlsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ImagesContents;

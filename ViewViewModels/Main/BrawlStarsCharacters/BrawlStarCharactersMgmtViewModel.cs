@@ -1,4 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
+using MyFirstMobileApp.Models.DataAccess;
+using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -6,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters
+namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters
 {
     public class BrawlStarCharactersMgmtViewModel : BaseViewModel
     {
         //Properties to bind to the UI
         public List<BrawlStarCharacters> BrawlStarCharactersCollection { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public int Visited { get; set; }
+        public string Name { get; set; }
+        public string Rarity { get; set; }
+        public int Owned { get; set; }
         public int Id { get; set; }
 
         //Text for the button based on whether it's an update or save operation
@@ -33,20 +35,20 @@ namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters
 
             if (BrawlStarCharacters != null)
             {
-                Title = TitleBrawlStarCharacters.TitleUpdateBrawlStarCharacters;
+                Title = TitleBrawlStarCharacters.TitleUpdateCharacter;
 
                 //If BrawlStarCharacters exists, populate ViewModel properties
                 BrawlStarCharactersCollection.Add(BrawlStarCharacters);
                 Id = BrawlStarCharacters.Id;
-                Country = BrawlStarCharacters.Country;
-                City = BrawlStarCharacters.City;
-                Visited = BrawlStarCharacters.Visited;
+                Name = BrawlStarCharacters.Name;
+                Rarity = BrawlStarCharacters.Rarity;
+                Owned = BrawlStarCharacters.Owned;
 
                 ButtonText = "Update";
             }
             else
             {
-                Title = TitleBrawlStarCharacters.TitleAddBrawlStarCharacters;
+                Title = TitleBrawlStarCharacters.TitleAddCharacter;
 
                 //If no BrawlStarCharacters provided, initialize a new one and set button text to "Save"
                 BrawlStarCharactersCollection = new List<BrawlStarCharacters>();
@@ -65,9 +67,9 @@ namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters
                     try
                     {
                         //Check for required data before save or update
-                        if (string.IsNullOrEmpty(Country) || string.IsNullOrEmpty(City))
+                        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Rarity))
                         {
-                            await Application.Current.MainPage.DisplayAlert("Message", "Country and City are required.", "Ok");
+                            await Application.Current.MainPage.DisplayAlert("Message", "Name and Rarity are required.", "Ok");
                             return;
                         }
 
@@ -77,9 +79,9 @@ namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters
                             BrawlStarCharacters = new BrawlStarCharacters
                             {
                                 Id = Id,
-                                Country = Country,
-                                City = City,
-                                Visited = Visited
+                                Name = Name,
+                                Rarity = Rarity,
+                                Owned = Owned
                             };
 
                             //Save the new BrawlStarCharacters
@@ -106,9 +108,9 @@ namespace MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters
                             BrawlStarCharacters = new BrawlStarCharacters
                             {
                                 Id = Id,
-                                Country = Country,
-                                City = City,
-                                Visited = Visited
+                                Name = Name,
+                                Rarity = Rarity,
+                                Owned = Owned
                             };
 
                             //Update the existing BrawlStarCharacters details

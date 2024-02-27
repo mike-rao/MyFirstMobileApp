@@ -96,10 +96,10 @@
 	  <MauiXaml Update="ViewViewModels\HorizontalLayoutContents\HorizontalLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModels\Main\BrawlStarCharacters\BrawlStarCharactersMgmtView.xaml">
+	  <MauiXaml Update="ViewViewModels\Main\BrawlStarsCharacters\BrawlStarCharactersMgmtView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModels\Main\BrawlStarCharacters\BrawlStarCharactersView.xaml">
+	  <MauiXaml Update="ViewViewModels\Main\BrawlStarsCharacters\BrawlStarCharactersView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Main\CollectionsContents\CollectionContents\CollectionPageView.xaml">

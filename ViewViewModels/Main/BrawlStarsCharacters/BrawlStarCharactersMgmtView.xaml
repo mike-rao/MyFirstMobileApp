@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMobileApp.ViewViewModels.Main.BrawlStarCharacters.BrawlStarCharactersMgmtView"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters.BrawlStarCharactersMgmtView"
              Title="{Binding Title}">
 
     <!-- Applying a "Style" to the buttons. This will provide space between the buttons -->
@@ -13,19 +13,19 @@
 
     <StackLayout>
         <StackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Enter Destination" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
+            <Label Text="Enter Character" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
         </StackLayout>
 
-        <Entry Placeholder="Enter Country"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
-                  Text="{Binding Country}" TextColor="Blue" x:Name="CountryTitle" />
+        <Entry Placeholder="Enter Name"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
+                  Text="{Binding Name}" TextColor="Blue" x:Name="NameTitle" />
 
-        <Entry Placeholder="Enter City"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
-                  Text="{Binding City}" TextColor="Blue" x:Name="CityTitle" />
+        <Entry Placeholder="Enter Rarity"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
+                  Text="{Binding Rarity}" TextColor="Blue" x:Name="RarityTitle" />
 
         <StackLayout HorizontalOptions="Center">
-            <Label Text="Visited?"  x:Name="label" FontSize="Medium"  TextColor="Blue" FontAttributes="Bold" />
+            <Label Text="Owned?"  x:Name="label" FontSize="Medium"  TextColor="Blue" FontAttributes="Bold" />
 
-            <Switch x:Name="IsVisited" IsToggled="{Binding Visited, Mode=TwoWay}" ThumbColor="Blue" OnColor="Green" />
+            <Switch x:Name="IsOwned" IsToggled="{Binding Owned, Mode=TwoWay}" ThumbColor="Blue" OnColor="Green" />
         </StackLayout>
 
         <StackLayout HorizontalOptions="FillAndExpand">
