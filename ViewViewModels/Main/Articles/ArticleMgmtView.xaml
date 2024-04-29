@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.Main.Articles.ArticleMgmtView"
+             Title="{Binding Title}">
+
+    <!-- Applying a "Style" to the buttons. This will provide space between the buttons -->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Enter Article" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
+        </StackLayout>
+
+        <Entry Placeholder="Enter Author"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
+                  Text="{Binding Author}" TextColor="Blue" x:Name="AuthorTitle" />
+
+        <Entry Placeholder="Enter Link"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
+                  Text="{Binding Link}" TextColor="Blue" x:Name="LinkTitle" />
+
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Link"  x:Name="label" FontSize="Medium"  TextColor="Blue" FontAttributes="Bold" />
+
+            <Switch x:Name="IsLinked" IsToggled="{Binding Linked, Mode=TwoWay}" ThumbColor="Blue" OnColor="Green" />
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Button Text="{Binding ButtonText, Mode=TwoWay}"  Command="{Binding PerformSave}" Padding="20"
+                         BackgroundColor="Green" TextColor="White" FontSize="Medium" FontAttributes="Bold" x:Name="saveBtn" />
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

@@ -25,8 +25,15 @@ namespace MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.AddEdit
             set
             {
                 if (_gameName != value)
-                    // Use the SetProperty method to update the private field _movies
-                    // and trigger property change notifications when the Movies property value changes.
+                    // Use the SetProperty method to update the private field _
+                    //
+                    //
+                    // s
+                    // and trigger property change notifications when the
+                    //
+                    //
+                    //
+                    // s property value changes.
                     SetProperty(ref _gameName, value);
             }
         }

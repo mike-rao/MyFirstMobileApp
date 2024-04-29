@@ -13,6 +13,6 @@ namespace MyFirstMobileApp.Models
         public static String ImagesButtonName { get; } = "Images";
         public static String CollectionsButtonName { get; } = "Collections";
         public static String ControlsButtonName { get; } = "Controls";
-        public static String SQLiteButtonName { get; } = "SQLite";
+        public static String SQLiteButtonName { get; } = "Articles";
     }
 }

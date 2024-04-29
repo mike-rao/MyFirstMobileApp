@@ -30,7 +30,9 @@ namespace MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionWIm
             this.LoadTroops();
         }
 
-        //Load movies into the Observable collection
+        //Load
+        //
+        //s into the Observable collection
         private void LoadTroops()
         {
             try

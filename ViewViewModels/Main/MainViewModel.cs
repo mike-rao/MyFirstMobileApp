@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
+using MyFirstMobileApp.ViewViewModels.Main.Articles;
 using MyFirstMobileApp.ViewViewModels.Main.BrawlStarsCharacters;
 using MyFirstMobileApp.ViewViewModels.Main.CollectionsContents;
 using MyFirstMobileApp.ViewViewModels.Main.ControlsContents;
@@ -22,14 +23,14 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         public String ImagesButton { get; set; } = TitleMain.ImagesButtonName;
         public String CollectionsButton { get; set; } = TitleMain.CollectionsButtonName;
         public String ControlsButton { get; set; } = TitleMain.ControlsButtonName;
-        public String SQLiteButton { get; set; } = TitleMain.SQLiteButtonName;
+        public String ArticlesButtonTitle { get; set; } = TitleMain.SQLiteButtonName;
 
         //Button Commands
         public ICommand OnLayoutsClicked { get; set; }
         public ICommand OnImagesClicked { get; set; }
         public ICommand OnCollectionsClicked { get; set; }
         public ICommand OnControlsClicked { get; set; }
-        public ICommand OnSQLiteClicked { get; set; }
+        public ICommand OnArticlesClicked { get; set; }
 
         public MainViewModel()
         {
@@ -40,7 +41,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
             OnImagesClicked = new Command(OnImagesClickedAsync);
             OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
             OnControlsClicked = new Command(OnControlsClickedAsync);
-            OnSQLiteClicked = new Command(OnSQLiteClickedAsync);
+            OnArticlesClicked = new Command(OnArticlesClickedAsync);
         }
 
         //Navigation between pages
@@ -60,9 +61,9 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         {
             await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
         }
-        private async void OnSQLiteClickedAsync()
+        private async void OnArticlesClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new BrawlStarCharactersView());
+            await Application.Current.MainPage.Navigation.PushAsync(new ArticleView());
         }
     }
 }

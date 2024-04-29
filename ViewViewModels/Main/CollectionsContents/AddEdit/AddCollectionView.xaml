@@ -7,7 +7,11 @@
 
         <Label Text="Game Title" FontAttributes="Bold" FontSize="Large" TextColor="Black" Margin="5,5,0,10" />
         
-        <Entry Placeholder="Enter Movie Title" FontAttributes="Bold" FontSize="Large" TextColor="Blue" HorizontalOptions="FillAndExpand"
+        <Entry Placeholder="Enter 
+               
+               
+               
+               Title" FontAttributes="Bold" FontSize="Large" TextColor="Blue" HorizontalOptions="FillAndExpand"
                   Text="{Binding GameName, Mode=TwoWay}" x:Name="GameTitle" Margin="5,-10" />
         
         <Button Text="Save" Command="{Binding SaveBtnClicked}" BackgroundColor="Green" TextColor="White"

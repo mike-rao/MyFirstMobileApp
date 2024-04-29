@@ -31,7 +31,8 @@ namespace MyFirstMobileApp.ViewViewModels.Main.CollectionsContents.CollectionCon
             this.LoadGames();
         }
 
-        //Load movies into the Observable collection
+        //Load
+        //s into the Observable collection
         private void LoadGames()
         {
             try

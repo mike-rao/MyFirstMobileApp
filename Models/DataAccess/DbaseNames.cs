@@ -2,6 +2,8 @@
 {
     public static class DbaseNames
     {
-        public static string BrawlStarCharactersDB { get; } = "BrawlStarCharacters.db3";
+        public static string ArticleDB { get; } = "Article.db3";
+
+        public static string BrawlStarCharactersDB { get; } = "BrawlStars.db3";
     }
 }

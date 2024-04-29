@@ -30,7 +30,12 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:EntityCollectionPage">
                         <StackLayout>
-                            <!-- FlexLayout with NameOfMovie and buttons -->
+                            <!-- FlexLayout with NameOf
+                            
+                            
+                            
+                            
+                            and buttons -->
                             <FlexLayout AlignItems="Start">
                                 <Label Text="{Binding NameofGame, Mode=TwoWay}" FontAttributes="Bold"
                                        HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium"
