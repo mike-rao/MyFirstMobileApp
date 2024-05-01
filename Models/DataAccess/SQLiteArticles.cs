@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models.Entities;
 using SQLite;
+using System.Diagnostics;
 
 namespace MyFirstMobileApp.Models.DataAccess
 {
@@ -62,6 +63,8 @@ namespace MyFirstMobileApp.Models.DataAccess
             //Execute the query and retrieve a list of articles
             List<Article> articles = await con.QueryAsync<Article>(sql);
 
+            Debug.WriteLine("Fetched:" + articles.Count);
+
             return articles;
         }
 
@@ -86,6 +89,7 @@ namespace MyFirstMobileApp.Models.DataAccess
                     //
                     //' table
                     await con.InsertAsync(article);
+                    Debug.WriteLine("Inserted:" + article.ToString());
                 }
                 else
                 {

@@ -3,6 +3,7 @@ using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
 using System.Collections.ObjectModel;
 using MyFirstMobileApp.Models.DataAccess;
+using System.Diagnostics;
 
 namespace MyFirstMobileApp.ViewViewModels.Main.Articles
 {
@@ -22,7 +23,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main.Articles
             {
                 _articleCollection = value;
                 OnPropertyChanged();
-                //Debug.WriteLine($"ArticleCollection Count: {_ArticleCollection?.Count}");
+                Debug.WriteLine($"ArticleCollection Count: {_articleCollection?.Count}");
             }
         }
 
@@ -35,18 +36,24 @@ namespace MyFirstMobileApp.ViewViewModels.Main.Articles
             ArticleCollection = new ObservableCollection<Article>();
 
             //Trigger an asynchronous refresh of the Article list data
+
             Task.Run(async () => await RefreshArticleListData());
 
             _ = RefreshArticleListData();
-
-
-
-
-            
         }
 
         public async Task RefreshArticleListData()
         {
+            Article test1 = new Article()
+            {
+                Id = 1,
+                Title = "Hello",
+                Link = "test link",
+                Author = "Mike"
+            };
+
+            await _sqliteService.SaveArticle(test1);
+
             // Retrieve Article data from the SQLite database
             var Article = await _sqliteService.GetArticle();
 
